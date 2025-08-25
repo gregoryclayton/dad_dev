@@ -1,0 +1,489 @@
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #fff;
+      font-family: monospace;
+      height: 100%;
+      min-height: 100vh;
+      
+    }
+
+  a { 
+    text-decoration: none;
+  }
+    
+    #dot {
+  width: 19px;
+  height: 19px;
+  background-image: linear-gradient(to bottom right, rgba(226, 121, 121, 0.936), rgba(237, 143, 209, 0.936));
+  box-shadow: 0 4px 8px 0 rgba(57, 23, 23, 0.221);
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(.7,1.7,.5,.7), box-shadow 0.25s;
+  animation: spinDot 7s linear infinite;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  color: black;
+}
+
+@keyframes spinDot {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}
+
+#dot:hover {
+  animation-play-state: paused;
+}
+
+#dot.expanded {
+  transform: scale(3.2);
+  box-shadow: 0 0 0 10px #f2e9e9, 0 8px 32px #0002;
+  animation-play-state: paused;
+}
+
+#dotMenu {
+  transition: opacity 0.3s;
+  opacity: 1;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+#dotMenu.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+    
+  
+
+   .signin-bar {
+      display: grid;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1em;
+      width:100%;
+      padding: 0.5em 0.5em 0.5em 0.5em;
+      background: #ffffff00;
+      border-bottom: 1px solid #e2e2e2;
+      font-family: monospace;
+    }
+    .signin-bar input[type="email"], .signin-bar input[type="password"] {
+     
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      font-size: 1em;
+      color: rgba(0, 0, 0, 0.705);
+      font-family: monospace;
+      
+    }
+    .signin-bar input[type="submit"] {
+      padding: 0.4em 1.2em;
+      border-radius: 6px;
+      border: none;
+      background-image: linear-gradient(to bottom right, rgba(226, 121, 121, 0.936), rgba(237, 143, 209, 0.936));
+      font-size: 0.7em;
+      cursor: pointer;
+      color: white;
+    }
+    .signin-bar .signin-msg {
+      margin-left: 1.5em;
+      color: #b00;
+      font-size: 1em;
+      font-weight: 500;
+    }
+    .signin-bar .signin-success {
+      color: #096a09;
+    }
+    .signin-bar .signed-in {
+      color: #222;
+      font-weight: 600;
+      margin-left: 1em;
+    }
+    .signin-bar form {
+      display: flex;
+      gap: 0.7em;
+      align-items: end;
+    }
+
+  .subtitles {
+    color:black;
+  }
+
+  .formlabel {
+    color:black;
+  }
+
+.slide-image {
+  width: 50px;
+  border-radius: 10px;
+}
+
+#slide-img {
+  width: 50px;
+}
+
+ .profile-container {
+      max-width: 600px;
+      margin: 4em auto;
+      background: #f8f8f8;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px #0002;
+      padding: 2.5em 3em;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+    }
+    .profile-pp {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px #0001;
+      background: #ddd;
+    }
+    .profile-data {
+      font-size: 1.1em;
+      margin-top: 1.5em;
+      line-height: 1.6;
+    }
+
+.nav-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.nav-button {
+color: rgb(0, 0, 0);
+font-family: monospace;
+margin:10px;
+
+}
+
+.title-container {
+  
+  padding:10px;
+  width: 176px;
+  height: 180px;
+  transition:0.1s;
+  
+  font-family: monospace;
+  font-size: 40px;
+  background: #b44b64c3;
+  margin: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+  justify-content: end;
+  align-content: end;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, rgba(226, 121, 121, 0.936), rgba(237, 143, 209, 0.936));
+   
+
+}
+
+.title-container:hover {
+ box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+  transition:0.1s;
+  cursor: default;
+}
+
+#slideshow-container {
+      width: 80%;
+      margin: 2em auto;
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 2em;
+      border-radius: 10px;
+      background: #f9f9f9;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    button {
+      padding: 0.5em 1.2em;
+      margin: 0 10px;
+      font-size: 1em;
+    }
+    
+
+    #container {
+      width: 80%;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       scrollbar-width: none; /* Firefox */
+    }
+
+    #container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+    
+    .artist-entry {
+      width: 95%;
+      
+      margin: 0.4em auto;
+      background-color: rgb(235, 168, 168);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px #0004;
+      
+      cursor: pointer;
+      transition: background 0.2s, transform 0.12s;
+      position: relative;
+    }
+    .artist-entry:hover {
+      background: #f883ae;
+      transform: scale(1.016);
+    }
+
+    .artist-pp {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 10px;
+
+    }
+
+.profile-works-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* Optional: Add a subtle shadow or border for visibility */
+}
+
+/* Method 1: Using text-shadow (best browser compatibility) */
+.outlined-text {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+    .artist-firstname {
+      font-size: 1.23em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-left: 1.2em;
+    }
+    .artist-lastname {
+      font-size: 1.23em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-left: 1.2em;
+    }
+
+    .artist-date {
+      font-size: 0.97em;
+      color: #000000;
+      margin-left: 5%;
+    }
+
+    .artist-country {
+      font-size: 0.97em;
+      color: #000000;
+      margin-left: 5%;
+    }
+
+    .artist-genre {
+      font-size: 0.97em;
+      color: #000000;
+      margin-left: 5%;
+    }
+
+
+
+    .facts-container {
+      display: grid;
+    
+    }
+
+    .facts {
+      color: black;
+    }
+
+    .links-container {
+      display: grid;
+    }
+
+    /* Form styling */
+.signup-form {
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #333;
+  background-color: #fff;
+  border-color: #e27979;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(226, 121, 121, 0.25);
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.formlabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Password strength indicator styles */
+.password-strength {
+  display: flex;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.strength-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
+}
+
+.strength-dot.active:nth-child(1) { background-color: #f00; }
+.strength-dot.active:nth-child(2) { background-color: #ff5500; }
+.strength-dot.active:nth-child(3) { background-color: #ff9900; }
+.strength-dot.active:nth-child(4) { background-color: #99cc00; }
+.strength-dot.active:nth-child(5) { background-color: #0c0; }
+
+.submit-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: linear-gradient(135deg, #e27979 60%, #ed8fd1 100%);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #d66f6f 60%, #e187c7 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+    .dropdown {
+      max-height: 0;
+      overflow: scroll;
+      opacity: 0;
+      background: #f9fafc;
+      color: #232946;
+      border-radius: 0 0 12px 12px;
+      margin-top: 0.8em;
+      box-sizing: border-box;
+      box-shadow: 0 6px 22px #0003;
+      transition: max-height 0.42s cubic-bezier(.53,1.4,.56,.95), opacity 0.36s;
+      font-size: 1em;
+      padding: 0 1em;
+      scrollbar-width: none; /* Firefox */
+
+    }
+
+
+    .dropdown::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+    
+    .artist-entry.open .dropdown {
+      max-height: 500px;
+      opacity: 1;
+      
+    }
+    .dropdown h4 {
+      margin: 0 0 0.2em 0;
+      color: #eebbc3;
+      font-size: 1.12em;
+    }
+    .works-list {
+      display: flex;
+      overflow: scroll;
+      gap: 0.8em;
+      margin-top: 0.5em;
+      scrollbar-width: none; /* Firefox */
+      
+    }
+
+    .works-list::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+    }
+    .work-card {
+      background: #b8c1ec;
+      color: #232946;
+      border-radius: 9px;
+      padding: 0.5em 1em;
+      font-size: 0.97em;
+      box-shadow: 0 2px 6px #23294618;
+      margin-bottom: 0.2em;
+      
+      text-align: center;
+    } 
+      
+      
+     
+      
+    
+    .dropdown img {
+      max-width: 250px;
+      max-height: 250px;
+      border-radius: 9px;
+      margin: 0.6em 0 0.2em 0;
+      box-shadow: 0 2px 10px #0002;
+      
+    }
+    @media (max-width:700px) {
+   
+      #addArtistForm { min-width: 0; width: 98vw; padding: 1em 0.7em 1em 0.7em; }
+    }
