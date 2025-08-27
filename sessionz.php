@@ -20,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signout'])) {
     session_destroy();
     
     // Redirect to prevent form resubmission
-    header("Location: v4.5.php");
+    header("Location: index.php");
     exit;
 }
+
 ?>
